@@ -12,8 +12,8 @@
     {{/paper-toolbar}}
 
     {{#paper-content padding=true}}
-      {{link-to 'Users' 'users'}}
-      {{link-to 'Posts' 'posts'}}
+      <div>{{link-to 'Users' 'users'}}</div>
+      <div>{{link-to 'Posts' 'posts'}}</div>
     {{/paper-content}}
   {{/paper-sidenav}}
 
@@ -25,7 +25,7 @@
             {{paper-icon "menu"}}
           {{/paper-button}}
         {{/paper-sidenav-toggle}}
-        <h2>Data Down Actions Up</h2>
+        {{page-title}}
       {{/toolbar.tools}}
     {{/paper-toolbar}}
 

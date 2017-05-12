@@ -3,7 +3,7 @@
     {{#card.title as |title|}}
       {{#title.text as |text|}}
         {{#text.headline}}{{post.title}}{{/text.headline}}
-        {{#text.subhead}}{{post.user.name}}{{/text.subhead}}
+        {{#text.subhead}}By {{post.user.name}}{{/text.subhead}}
       {{/title.text}}
     {{/card.title}}
     {{#card.content}}

@@ -6,10 +6,6 @@ export default Ember.Route.extend({
   pageTitle: inject.service(),
 
   activate() {
-    this.get('pageTitle').set('title', 'Posts');
-  },
-
-  model() {
-    return this.get('store').findAll('post');
+    this.get('pageTitle').set('title', 'Home');
   }
 });
