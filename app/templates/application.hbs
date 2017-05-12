@@ -1,5 +1,36 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#paper-sidenav-container class="site-nav-container"}}
+  {{#paper-sidenav
+    class="md-whiteframe-z2"
+    lockedOpen="gt-sm"
+    open=isSidenavOpen
+    onToggle=(action (mut isSidenavOpen))}}
 
-{{outlet}}
+    {{#paper-toolbar as |toolbar|}}
+      {{#toolbar.tools}}
+        {{link-to 'Home' 'application'}}
+      {{/toolbar.tools}}
+    {{/paper-toolbar}}
+
+    {{#paper-content padding=true}}
+      Çup?
+    {{/paper-content}}
+  {{/paper-sidenav}}
+
+  <div class="flex layout-column" tabindex="-1" role="main">
+    {{#paper-toolbar class="layout-row layout-align-start" as |toolbar|}}
+      {{#toolbar.tools}}
+        {{#paper-sidenav-toggle as |toggleAction|}}
+          {{#paper-button class="hide-gt-sm" onClick=(action toggleAction) iconButton=true}}
+            {{paper-icon "menu"}}
+          {{/paper-button}}
+        {{/paper-sidenav-toggle}}
+        <h2>Data Down Actions Up</h2>
+      {{/toolbar.tools}}
+    {{/paper-toolbar}}
+
+    <div class='main-container'>
+      {{outlet}}
+    </div>
+  </div>
+
+{{/paper-sidenav-container}}
