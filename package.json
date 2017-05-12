@@ -1,9 +1,9 @@
 {
   "name": "ember-ddau-orthodoxy",
   "version": "0.0.0",
-  "description": "Small description for ember-ddau-orthodoxy goes here",
+  "description": "A toy app for exploring the 'Data Down Actions Up' orthodoxy for the May 2017 Ember ATX meetup.",
   "license": "MIT",
-  "author": "",
+  "author": "Chris Bonser",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -25,6 +25,7 @@
     "ember-cli-htmlbars-inline-precompile": "^0.3.6",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-jshint": "^2.0.1",
+    "ember-cli-mirage": "0.3.1",
     "ember-cli-qunit": "^3.0.1",
     "ember-cli-release": "^0.2.9",
     "ember-cli-sass": "6.1.3",
