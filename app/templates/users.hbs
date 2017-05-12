@@ -5,5 +5,8 @@
         {{#text.headline}}{{user.name}}{{/text.headline}}
       {{/title.text}}
     {{/card.title}}
+    {{#card.actions}}
+      {{#paper-button onClick=(action 'cardClick' user)}}Profile{{/paper-button}}
+    {{/card.actions}}
   {{/paper-card}}
 {{/each}}
