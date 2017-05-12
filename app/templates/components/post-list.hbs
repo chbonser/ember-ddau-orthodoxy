@@ -1,0 +1,13 @@
+{{#each posts as |post|}}
+  {{#paper-card as |card|}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{#text.headline}}{{post.title}}{{/text.headline}}
+        {{#text.subhead}}{{post.user.name}}{{/text.subhead}}
+      {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+      <p>{{post.body}}</p>
+    {{/card.content}}
+  {{/paper-card}}
+{{/each}}
