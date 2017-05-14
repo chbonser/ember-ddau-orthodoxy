@@ -9,5 +9,8 @@
     {{#card.content}}
       <p>{{post.body}}</p>
     {{/card.content}}
+    {{#card.actions}}
+      {{#paper-button iconButton=true onClick=(action toggleDrawer post)}}{{paper-icon "info"}}{{/paper-button}}
+    {{/card.actions}}
   {{/paper-card}}
 {{/each}}
