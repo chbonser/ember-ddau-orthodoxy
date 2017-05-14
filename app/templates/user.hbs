@@ -1,7 +1,11 @@
-{{#paper-card as |card|}}
-  {{#card.title as |title|}}
-    {{#title.text as |text|}}
-      {{#text.headline}}{{model.name}}{{/text.headline}}
-    {{/title.text}}
-  {{/card.title}}
-{{/paper-card}}
+<div class="layout-row">
+  {{#paper-card class="flex-50" as |card|}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{#text.headline}}{{model.name}}{{/text.headline}}
+      {{/title.text}}
+    {{/card.title}}
+  {{/paper-card}}
+
+  {{post-list model.posts toggleDrawer=(action 'toggleDrawer') class="flex-50"}}
+</div>
