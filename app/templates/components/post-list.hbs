@@ -1,16 +1,5 @@
 {{#each posts as |post|}}
-  {{#paper-card as |card|}}
-    {{#card.title as |title|}}
-      {{#title.text as |text|}}
-        {{#text.headline}}{{post.title}}{{/text.headline}}
-        {{#text.subhead}}By {{post.user.name}}{{/text.subhead}}
-      {{/title.text}}
-    {{/card.title}}
-    {{#card.content}}
-      <p>{{post.body}}</p>
-    {{/card.content}}
-    {{#card.actions}}
-      {{#paper-button iconButton=true onClick=(action toggleDrawer post)}}{{paper-icon "info"}}{{/paper-button}}
-    {{/card.actions}}
-  {{/paper-card}}
+  {{post-item post
+    toggleDrawer=toggleDrawer
+  }}
 {{/each}}
