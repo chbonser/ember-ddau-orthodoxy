@@ -1,3 +1,6 @@
 {{#each posts as |post|}}
-  {{post-item post}}
+  {{post-item post
+    onWillDestroyElement=(wormhole-action 'closeInfoDrawer' post)
+    toggleInfo=(wormhole-action 'toggleOpenInfoDrawer' post)
+  }}
 {{/each}}

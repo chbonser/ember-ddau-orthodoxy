@@ -10,6 +10,6 @@
   {{/card.content}}
   {{#card.actions}}
     {{#paper-button onClick=(action 'deletePost')}}DELETE{{/paper-button}}
-    {{#paper-button iconButton=true onClick=(action 'toggleDrawer')}}{{paper-icon "info"}}{{/paper-button}}
+    {{#paper-button iconButton=true onClick=(action toggleInfo)}}{{paper-icon "info"}}{{/paper-button}}
   {{/card.actions}}
 {{/paper-card}}

@@ -15,9 +15,7 @@ export default Ember.Service.extend({
   },
 
   close(record) {
-    console.log(`${this.toString()}#close`, record);
     if(isEmpty(record) || isEqual(record, this.get('record'))) {
-      console.log(`close it!`);
       this.set('record', null);
     }
   }
