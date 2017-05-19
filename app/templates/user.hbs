@@ -7,9 +7,5 @@
     {{/card.title}}
   {{/paper-card}}
 
-  {{post-list model.posts
-    toggleDrawer=(action 'togglePostDrawer')
-    closeDrawer=(action 'closePostDrawer')
-    class="flex-50"
-  }}
+  {{post-list model.posts class="flex-50"}}
 </div>

@@ -1,0 +1,13 @@
+<div class="flex">
+  {{yield}}
+</div>
+
+{{#if isOpen}}
+  <div class="flex-33 md-whiteframe-z2">
+    <div class="layout-row layout-align-end">
+      {{#paper-button iconButton=true onClick=(action 'close' record)}}{{paper-icon 'close'}}{{/paper-button}}
+    </div>
+    <h3>{{record.title}}</h3>
+    <p>{{record.user.name}}</p>
+  </div>
+{{/if}}

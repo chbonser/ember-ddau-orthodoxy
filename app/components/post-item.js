@@ -1,12 +1,20 @@
 import Ember from 'ember';
 
+const { inject } = Ember;
+
 const PostItem = Ember.Component.extend({
+  infoDrawer: inject.service(),
+
+  willDestroyElement() {
+    this.get('infoDrawer').close(this.get('post'));
+  },
+
   actions: {
     deletePost() {
-      let post = this.get('post');
-
-      this.get('closeDrawer')(post);
-      post.destroyRecord();
+      this.get('post').destroyRecord();
+    },
+    toggleDrawer() {
+      this.get('infoDrawer').toggleOpen(this.get('post'));
     }
   }
 });
