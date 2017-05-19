@@ -11,5 +11,8 @@ export default Ember.Route.extend({
         this.controller.set('drawerRecord', record);
       }
     },
+    closeDrawer() {
+      this.controller.set('drawerRecord', null);
+    }
   }
 });

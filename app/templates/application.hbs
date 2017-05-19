@@ -38,7 +38,7 @@
         {{#if isDrawerOpen}}
           <div class="flex-33 md-whiteframe-z2">
             <div class="layout-row layout-align-end">
-              {{#paper-button iconButton=true onClick=(action 'closeDrawer')}}{{paper-icon 'close'}}{{/paper-button}}
+              {{#paper-button iconButton=true onClick=(action 'closePostDrawer')}}{{paper-icon 'close'}}{{/paper-button}}
             </div>
             <h3>{{drawerRecord.title}}</h3>
             <p>{{drawerRecord.user.name}}</p>

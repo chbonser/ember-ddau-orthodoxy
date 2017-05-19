@@ -7,8 +7,8 @@ export default Ember.Controller.extend({
   isDrawerOpen: computed.notEmpty('drawerRecord'),
 
   actions: {
-    closeDrawer() {
-      this.set('drawerRecord', null);
+    closePostDrawer() {
+      this.send('closeDrawer');
     }
   }
 });
