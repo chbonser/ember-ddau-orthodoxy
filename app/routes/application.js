@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { isEqual } = Ember;
+const { isEqual, isEmpty } = Ember;
 
 export default Ember.Route.extend({
   actions: {
@@ -11,8 +11,10 @@ export default Ember.Route.extend({
         this.controller.set('drawerRecord', record);
       }
     },
-    closeDrawer() {
-      this.controller.set('drawerRecord', null);
+    closeDrawer(record) {
+      if(isEmpty(record) || isEqual(record, this.controller.get('drawerRecord'))) {
+        this.controller.set('drawerRecord', null);
+      }
     }
   }
 });

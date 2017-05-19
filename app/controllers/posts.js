@@ -6,8 +6,8 @@ export default Ember.Controller.extend({
     togglePostDrawer(record) {
       this.send('toggleDrawer', record);
     },
-    closePostDrawer() {
-      this.send('closeDrawer');
+    closePostDrawer(record) {
+      this.send('closeDrawer', record);
     }
   }
 });
